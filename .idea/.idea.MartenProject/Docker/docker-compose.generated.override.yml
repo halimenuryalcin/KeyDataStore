@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  api:
+    build:
+      context: "C:\\Users\\nurre\\RiderProjects\\MartenProject"
+      dockerfile: "Dockerfile"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/MartenProject.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "martenproject:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\nurre\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\nurre\\RiderProjects\\MartenProject:/app:rw"
+    - "C:\\Users\\nurre\\RiderProjects\\MartenProject:/src:rw"
+    working_dir: "/app"
